@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(197, 100%, 97%);
+  --foreground: hsl(202, 66%, 25%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(202, 66%, 25%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(202, 66%, 25%);
+  --primary: hsl(199, 89%, 48%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(202, 66%, 25%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(197, 100%, 95%);
+  --muted-foreground: hsl(199, 25%, 45%);
+  --accent: hsl(199, 89%, 89%);
+  --accent-foreground: hsl(199, 89%, 48%);
+  --destructive: hsl(356, 91%, 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(199, 45%, 85%);
+  --input: hsl(199, 65%, 96%);
+  --ring: hsl(199, 89%, 48%);
+  --chart-1: hsl(199, 89%, 48%);
+  --chart-2: hsl(160, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --ocean-50: hsl(197, 100%, 97%);
+  --ocean-100: hsl(199, 100%, 94%);
+  --ocean-500: hsl(199, 89%, 48%);
+  --ocean-600: hsl(199, 84%, 39%);
+  --ocean-700: hsl(202, 66%, 25%);
+  --ocean-900: hsl(199, 89%, 21%);
+  --coral-500: hsl(42, 93%, 56%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 7% 91%);
+  --card: hsl(228 10% 10%);
+  --card-foreground: hsl(0 0% 85%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 7% 91%);
+  --primary: hsl(204, 88%, 53%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195, 15%, 95%);
+  --secondary-foreground: hsl(210 25% 8%);
+  --muted: hsl(0 0% 9%);
+  --muted-foreground: hsl(210 3% 46%);
+  --accent: hsl(206, 70%, 8%);
+  --accent-foreground: hsl(204, 88%, 53%);
+  --destructive: hsl(356, 91%, 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5% 15%);
+  --input: hsl(208 28% 18%);
+  --ring: hsl(202, 89%, 53%);
+  --chart-1: hsl(204, 88%, 53%);
+  --chart-2: hsl(160, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --ocean-50: hsl(228 10% 10%);
+  --ocean-100: hsl(220 9% 15%);
+  --ocean-500: hsl(204, 88%, 53%);
+  --ocean-600: hsl(199, 84%, 39%);
+  --ocean-700: hsl(204, 88%, 70%);
+  --ocean-900: hsl(204, 88%, 90%);
+  --coral-500: hsl(42, 93%, 56%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: linear-gradient(135deg, var(--ocean-50), var(--ocean-100));
+    color: var(--foreground);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .ocean-gradient {
+    background: linear-gradient(135deg, var(--ocean-50), var(--ocean-100));
+  }
+  
+  .text-ocean-50 { color: var(--ocean-50); }
+  .text-ocean-100 { color: var(--ocean-100); }
+  .text-ocean-500 { color: var(--ocean-500); }
+  .text-ocean-600 { color: var(--ocean-600); }
+  .text-ocean-700 { color: var(--ocean-700); }
+  .text-ocean-900 { color: var(--ocean-900); }
+  .text-coral-500 { color: var(--coral-500); }
+  
+  .bg-ocean-50 { background-color: var(--ocean-50); }
+  .bg-ocean-100 { background-color: var(--ocean-100); }
+  .bg-ocean-500 { background-color: var(--ocean-500); }
+  .bg-ocean-600 { background-color: var(--ocean-600); }
+  .bg-ocean-700 { background-color: var(--ocean-700); }
+  .bg-ocean-900 { background-color: var(--ocean-900); }
+  .bg-coral-500 { background-color: var(--coral-500); }
+  
+  .border-ocean-100 { border-color: var(--ocean-100); }
+  .border-ocean-200 { border-color: var(--ocean-100); }
+  
+  .hover\:bg-ocean-700:hover { background-color: var(--ocean-700); }
+}
